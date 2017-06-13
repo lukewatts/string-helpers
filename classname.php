@@ -4,7 +4,10 @@ if (!function_exists('classname')) {
     /**
     * Get the class name without namespace
     *
+    * @author Luke Watts
+    *
     * @param  string|object  $class
+    *
     * @return string
     */
     function classname($class, $namespace = false)
