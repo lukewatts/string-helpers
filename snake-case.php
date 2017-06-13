@@ -14,10 +14,12 @@ if (!function_exists('snake_case')) {
     {
         $regex = '/(?<!^)((?<![[:upper:]])[[:upper:]]|[[:upper:]](?![[:upper:]]))/';
 
-        $string = str_replace('-', '_', $string);
+        $string = str_replace(['_', '-'], ' ', $string);
 
         return implode('_', array_map(function ($word) {
             return strtolower($word);
-        }, explode(' ', preg_replace($regex, ' $1', $string))));
+        }, array_filter(explode(' ', preg_replace($regex, ' $1', $string)), function ($word) {
+            return (!empty($word));
+        })));
     }
 }
