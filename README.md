@@ -101,7 +101,7 @@ title_case('some String with_many-symbols'); // Some String With_Many-Symbols
 MIT
 
 ## Author
-&copyright; 2017 Luke Watts
+&copy; 2017 Luke Watts
 
 https://luke-watts.com
 
